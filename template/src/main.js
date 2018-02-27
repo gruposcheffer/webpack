@@ -7,6 +7,10 @@ import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
+import store from '@/plugins/store'
+import '@/plugins/moment'
+import '@/plugins/axios'
+import '@/plugins/kendo'
 
 Vue.config.productionTip = false
 
@@ -21,6 +25,7 @@ new Vue({
   {{/if_eq}}
   {{#if_eq build "standalone"}}
   components: { App },
+  store: store,
   template: '<App/>'
   {{/if_eq}}
 })
