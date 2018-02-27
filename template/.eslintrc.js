@@ -7,6 +7,11 @@ module.exports = {
   },
   env: {
     browser: true,
+    jquery: true
+  },
+  globals: {
+    kendo: false,
+    moment: false
   },
   {{#if_eq lintConfig "standard"}}
   extends: [

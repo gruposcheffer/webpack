@@ -25,10 +25,25 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "jquery": "^3.3.1",
+    "@progress/kendo-all-vue-wrapper": "^2018.1.221",
+    "@progress/kendo-datasource-vue-wrapper": "^2018.1.221",
+    "@progress/kendo-grid-vue-wrapper": "^2018.1.221",
+    "@progress/kendo-theme-default": "^2.48.1",
+    "@progress/kendo-theme-material": "^0.4.1",
+    "@progress/kendo-ui": "^2018.1.226",
+    "axios": "^0.18.0",
+    "vue-axios": "^2.0.2",
+    "moment": "^2.20.1",
+    "vue-moment": "^3.1.0",
+    "vuex": "^3.0.1",
     "vue": "^2.5.2"{{#router}},
     "vue-router": "^3.0.1"{{/router}}
   },
   "devDependencies": {
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.2",
     {{#lint}}
     "babel-eslint": "^7.2.3",
     "eslint": "^4.15.0",
