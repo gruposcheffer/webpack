@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/components/Home'
+import routes from './routes'
+import authGuard from './guard'
 
 Vue.use(VueRouter)
 
-export default new VueRouter({
-  routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    }
-  ]
+const router = new VueRouter({
+  mode: 'history',
+  routes
 })
+
+router.beforeEach(authGuard)
+
+export default router
