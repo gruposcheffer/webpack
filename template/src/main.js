@@ -11,6 +11,8 @@ import store from './store'
 import '@/plugins/moment'
 import '@/plugins/axios'
 import '@/plugins/kendo'
+import '@/plugins/vuetify'
+import '@/plugins/gs'
 
 Vue.config.productionTip = false
 
