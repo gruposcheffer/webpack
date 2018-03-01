@@ -7,7 +7,7 @@ import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
-import store from '@/plugins/store'
+import store from './store'
 import '@/plugins/moment'
 import '@/plugins/axios'
 import '@/plugins/kendo'
