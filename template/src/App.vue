@@ -1,34 +1,38 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <v-app id="app">
+    <toolbar v-if="logged"/>
+
     {{#router}}
     <router-view/>
     {{else}}
-    <HelloWorld/>
+    <Home/>
     {{/router}}
-  </div>
+  </v-app>
 </template>
 
 <script>
 {{#unless router}}
 import Home from './components/Home'
-
 {{/unless}}
+import toolbar from '@/components/template/TheToolbar'
+
 export default {
-  name: 'App'{{#router}}{{else}},
+  name: 'App',
   components: {
+    'toolbar': toolbar{{#router}}{{else}},
     Home
-  }{{/router}}
+    {{/router}}
+  },
+  computed: {
+    logged () {
+      return this.$store.state.logged
+    }
+  }
 }
 </script>
 
 <style lang="scss">
 #app {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
